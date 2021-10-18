@@ -19,20 +19,10 @@ def get_files(path):
     return files
 
 
-# for i in range(2019,2022): 
-#     for j in range(1, 13):
-        # year = i
-        # month = j
-        # day = calendar.monthrange(year, month)[1]
-        # print(f'{year}.{month}.{day}')
-        
-
 def file_dates(file):
     year = int(re.search(r'(\d+)', file).group())
     month = int(re.search(r'\.(\d\d)', file).group()[1:])
     day = calendar.monthrange(year, month)[1]
-    
-        
+       
     return year, month, day
         
-    
